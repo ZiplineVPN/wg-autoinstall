@@ -3,7 +3,7 @@
 SERVER_PUB_IP=$(ip -4 addr | sed -ne 's|^.* inet \([^/]*\)/.* scope global.*$|\1|p' | awk '{print $1}' | head -1)
 SERVER_PUB_NIC="$(ip -4 route ls | grep default | grep -Po '(?<=dev )(\S+)' | head -1)"
 SERVER_WG_NIC="wg0"
-SERVER_WG_IPV4="10.11.12.1"
+SERVER_WG_IPV4="10.66.66.1"
 SERVER_WG_IPV6="fd42:42:42::1"
 SERVER_PORT=$(shuf -i49152-65535 -n1)
 CLIENT_DNS_1="8.8.8.8"
