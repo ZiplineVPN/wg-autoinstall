@@ -20,6 +20,7 @@ function newClient() {
 	#		break
 	#	fi
 	#done
+	DOT_IP=2
 	CLIENT_NAME=$1
 	BASE_IP=$(echo "$SERVER_WG_IPV4" | awk -F '.' '{ print $1"."$2"."$3 }')
 	CLIENT_WG_IPV4="${BASE_IP}.${DOT_IP}"
